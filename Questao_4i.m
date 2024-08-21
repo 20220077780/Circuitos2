@@ -8,8 +8,10 @@ c=0.2;
 l=2;
 
 
-Is = [(2/s)+(v/c); -(v/c)-(i/s)+5/(2*s)];
+Is = [(2/s)+(v*c); -(v*c)-(i/s)+5/(2*s)];
 Ye = [1+s*c -s*c; -s*c (1/2)+(s*c)+1/(l*s)];
 e = Ye\Is
+impulse(e);
+%title('Resposta ao Impulso da Tensão do Nó A');
 
 %% Ye * e = Is
